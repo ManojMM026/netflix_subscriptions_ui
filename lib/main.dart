@@ -31,13 +31,14 @@ class _NetflixSubscriptionState extends State<NetflixSubscription> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: false,
         leading: Icon(
           CupertinoIcons.back,
           color: Colors.black,
         ),
         title: Text(
           'Subscriptions',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black,fontSize: 14),
         ),
         elevation: 0,
         backgroundColor: Colors.white,
@@ -165,7 +166,9 @@ class _NetflixSubscriptionState extends State<NetflixSubscription> {
                   child: _buildFeatureLabel('-4k Video Support'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 5.0),
+                  padding: const EdgeInsets.only(
+                    top: 5.0,
+                  ),
                   child: _buildFeatureLabel(
                       '-Simultaneous viewing\n up to 4 people'),
                 ),
@@ -195,7 +198,7 @@ class _NetflixSubscriptionState extends State<NetflixSubscription> {
           letterSpacing: 0.2,
           color: Colors.grey,
           fontWeight: FontWeight.w500,
-          fontSize: 12),
+          fontSize: 10),
       textAlign: TextAlign.start,
     );
   }
